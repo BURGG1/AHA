@@ -2847,6 +2847,7 @@ Arrw:
 			int hcntr = 0, hcntr2 = 0;
 
 		p1:
+		        hdc(1);
 			hp1();
 
 			coorxy(62, 26); cout << "  ";
@@ -2894,6 +2895,7 @@ Arrw:
 					hp2();
 
 				p2:
+				        hdc(1);
 					coorxy(62, 26); cout << "  ";
 					coorxy(82, 26); cout << "  ";
 
