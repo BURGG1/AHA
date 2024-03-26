@@ -2624,8 +2624,8 @@ int main() {
 	//coorxy(45, 22); system("pause"); ////////////// OPENING 
 	coorxy(45, 22); cout << string(40, ' ');
 	Sleep(500);
-	coorxy(93, 26); cout << "   1A.G1  ";
-	coorxy(93, 27); cout << "ver.02.2024.4.1";
+	coorxy(93, 26); cout << "      1A.G1  ";
+	coorxy(93, 27); cout << "ver.2.0.2024.4.1";
 	//login
 	hdc(0);
 	coorxy(40, 20); cout << string(6, char(196)); coorxy(71, 20); cout << string(6, char(196));
@@ -2738,7 +2738,7 @@ mn:
 		cy += 5;
 	}
 
-	coorxy(52, 6); cout << "- BSIT Student Enrollment Management System -";
+	coorxy(56, 6); cout << "- BSIT Student Enrollment Management System -";
 
 	coorxy(18, 4); cout << "Student Registration";
 	coorxy(17, 9); cout << "Curriculum Management";
@@ -2978,8 +2978,8 @@ Arrw:
 
 			ext = 0;
 			cntr = 1;
-			for (int i = 0; i < 26;) {
-				buttonxy(45 + i, 13, 12, 1);
+			for (int i = 0; i < 27;) {
+				buttonxy(46 + i, 13, 12, 1);
 				i += 17;
 			}
 
@@ -2994,23 +2994,23 @@ Arrw:
 			coorxy(37, 18); cout << string(50, char(196)); coorxy(87, 18); cout << char(217);
 
 			//buttonxy2(45, 11, 12, 1, 2);
-			coorxy(55, 11); cout << "Are you sure?";
-			coorxy(50, 14); cout << "Yes";
-			coorxy(68, 14); cout << "No";
+			coorxy(56, 11); cout << "Are you sure?";
+			coorxy(51, 14); cout << "Yes";
+			coorxy(69, 14); cout << "No";
 
 		ls:
 			cy = 0;
 			for (int a = 0; a < 2; a++) {
-				coorxy(44, 12 + cy); cout << string(33, ' ');
+				coorxy(45, 12 + cy); cout << string(33, ' ');
 				cy += 4;
 			}
 
 
 			if (cntr == 0) {
-				buttonxy2(45, 13, 12, 1, 2);
+				buttonxy2(46, 13, 12, 1, 2);
 			}
 			else if (cntr == 1) {
-				buttonxy2(62, 13, 12, 1, 2);
+				buttonxy2(63, 13, 12, 1, 2);
 			}
 
 			coorxy(39, 6); cout << "- BSIT Student Enrollment Management System -";
@@ -3030,13 +3030,13 @@ Arrw:
 				break;
 			case 13:
 				if (cntr == 0) {
-					psdbtn(45, 13, 12, 1);
+					psdbtn(46, 13, 12, 1);
 					Sleep(150);
 					system("cls");
 					exit(0);
 				}
 				else if (cntr == 1) {
-					psdbtn(62, 13, 12, 1);
+					psdbtn(63, 13, 12, 1);
 					Sleep(150);
 					system("cls");
 					cntr = 4;
