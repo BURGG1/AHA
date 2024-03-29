@@ -1,6 +1,5 @@
 #pragma once
 #include <iostream>
-#include <windows.h> 
 #include "Coorxy.h"
 #include "border.h"
 
@@ -56,19 +55,16 @@ void hp2()
     gotoxy(12, 26);
     cout << "- BSIT Student Enrollment Management System -";
 
-
-    buttonxy(65, 25, 14, 1);
-    buttonxy(90, 25, 14, 1);
-
-	gotoxy(69, 26); cout << "PREVIOUS";
-    gotoxy(96, 26); cout << "BACK";
+	
+    
 }
 
 void hp1()
 {
-	lborder();
 	int margin = 12;
 	int topSpace = 3;
+
+	lborder();
 
 	gotoxy(margin, topSpace);
 	cout << "NAVIGATION:\n";
@@ -117,10 +113,4 @@ void hp1()
 	gotoxy(12, 26);
 	cout << "- BSIT Student Enrollment Management System -";
 
-
-	buttonxy(65, 25, 14, 1);
-	buttonxy(90, 25, 14, 1);
-
-	gotoxy(71, 26); cout << "NEXT";
-	gotoxy(96, 26); cout << "BACK";
 }
