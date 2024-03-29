@@ -98,6 +98,7 @@ int getchVal(string& s, char t, int l) { // 101 is up, 111 is down // s string s
 			for (int j = 0; j < z; j++) { // Storing to string variable
 				if ((x[j] >= 'a' && x[j] <= 'z') || (x[j] >= 'A' && x[j] <= 'Z') || (x[j] >= '0' && x[j] <= '9') || x[j] == ' ') {
 					s += x[j];
+
 				}
 				else {
 					break;
@@ -157,8 +158,10 @@ int getchVal2(string& s, char t, int l) { // 101 is up, 111 is down // s string 
 
 		if (a == -32) {
 			a = _getch();
-			if (a == 72 || a == 75) return  101; // arrow up
-			else if (a == 80 || a == 77) return 110; // arrow down
+			if (a == 72 || a == 75)
+				return  101;  // arrow up
+			else if (a == 80 || a == 77)
+				return 110;// arrow down
 		}
 		else if (a == 13) {
 			x[z] = '\0';
