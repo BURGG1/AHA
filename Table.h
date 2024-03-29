@@ -47,7 +47,6 @@ void table() { // REGISTRATION TABLE
 
 
 	coorxy(3, 2); cout << char(179) << " Search Pooling number " << char(179) << " :"; coorxy(40, 2); cout << char(179);
-	coorxy(70, 2); cout << "- BSIT Student Enrollment Management System -";
 	coorxy(5, 6); cout << "First name " << char(179) << ":";
 	coorxy(40, 6); cout << char(179) << " Middle name " << char(179) << ":";
 	coorxy(78, 6); cout << char(179) << " Last name " << char(179) << ":";
@@ -73,7 +72,9 @@ void table() { // REGISTRATION TABLE
 	coorxy(101, 27); cout << "BACK";
 	coorxy(26, 27); cout << "HELP";
 
-	coorxy(24, 29); color(3); cout << "Use UP and DOWN arrow key to navigate and Enter key to register your inputs"; color(7);
+	coorxy(35, 0); cout << "- BSIT Student Enrollment Management System -";
+
+	gotoxy(24, 4); color(8); cout << "Use Arrow keys to navigate and Enter key to choose and register your inputs"; color(7);
 
 
 	gotoxy(3, 1); cout << char(218); gotoxy(40, 1); cout << char(191);
@@ -99,8 +100,7 @@ void pooltble() { // PAGE 2 REGISTRATION
 		coorxy(36, 11 + i); cout << char(179);
 		coorxy(87, 11 + i); cout << char(179);
 	}
-	coorxy(87, 10); cout << char(191);
-	coorxy(36, 18); cout << char(192);
+	coorxy(87, 10); cout << char(191);coorxy(36, 18); cout << char(192);
 	coorxy(37, 18); cout << string(50, char(196)); coorxy(87, 18); cout << char(217);
 	//lines inside the box  
 	coorxy(38, 12); cout << string(48, char(196));
@@ -112,6 +112,26 @@ void pooltble() { // PAGE 2 REGISTRATION
 	coorxy(40, 15); cout << "Target Year/Semester code: " << char(179);
 	coorxy(40, 17); cout << "Pooling num: " << char(179);
 
+}
+
+void lstp()
+{
+	coorxy(87, 9); cout << char(191); coorxy(37, 9); cout << string(50, char(196)); coorxy(36, 9); cout << char(218);
+	for (int i = 0; i < 8; i++)
+	{
+		coorxy(36, 10 + i); cout << char(179);
+		coorxy(87, 10 + i); cout << char(179);
+	}
+	coorxy(36, 18); cout << char(192); coorxy(37, 18); cout << string(50, char(196)); coorxy(87, 18); cout << char(217);
+
+	coorxy(46, 10); cout << "C O N G R A T U L A T I O N S !";
+	coorxy(46, 15); cout << " you're successfully enrolled!";
+	coorxy(58, 16); cout << " with";
+	coorxy(50, 14); cout << string(22, char(196));
+	
+	buttonxy(53, 21, 14, 1);
+	gotoxy(60, 22); cout << "OK";
+	gotoxy(50, 20);
 }
 
 void horizontal_line(int gx, int gy, int l, int a)
@@ -164,30 +184,20 @@ void tablec()//CURRICULUM TABLE
 	gotoxy(3, 6); cout << "NO"; gotoxy(10, 6); cout << "YEAR LEVEL"; gotoxy(27, 6); cout << " SUBJECT CODE";
 	gotoxy(55, 6); cout << " SUBJECT DESCRIPTION"; gotoxy(92, 6); cout << "UNIT"; gotoxy(103, 6); cout << "PRE-REQ.";
 
-	/*buttonxy(40, 26, 15, 1);
-	coorxy(46, 27); cout << "HELP";
 
-	gotoxy(60, 26); cout << string(15, char(205));	gotoxy(60, 28); cout << string(15, char(205)); gotoxy(60, 27); cout << string(1, char(186)); gotoxy(75, 27); cout << string(1, char(186));
-	gotoxy(60, 26); cout << string(1, char(201));	gotoxy(60, 28); cout << string(1, char(200));	gotoxy(75, 26); cout << string(1, char(187));	gotoxy(75, 28); cout << string(1, char(188));
-
-	gotoxy(80, 26); cout << string(15, char(205));	gotoxy(80, 28); cout << string(15, char(205)); gotoxy(80, 27); cout << string(1, char(186)); gotoxy(95, 27); cout << string(1, char(186));
-	gotoxy(80, 26); cout << string(1, char(201));	gotoxy(80, 28); cout << string(1, char(200));	gotoxy(95, 26); cout << string(1, char(187));	gotoxy(95, 28); cout << string(1, char(188));
-
-	gotoxy(100, 26); cout << string(15, char(205));	gotoxy(100, 28); cout << string(15, char(205)); gotoxy(100, 27); cout << string(1, char(186)); gotoxy(115, 27); cout << string(1, char(186));
-	gotoxy(100, 26); cout << string(1, char(201));	gotoxy(100, 28); cout << string(1, char(200));	gotoxy(115, 26); cout << string(1, char(187));	gotoxy(115, 28); cout << string(1, char(188));
-
-	gotoxy(64, 27); cout << " UPDATE "; gotoxy(85, 27); cout << "DELETE"; gotoxy(106, 27); cout << "BACK";*/
-	
-	n = 0;
-	for (int i = 0; i < 4; i++) {
-		buttonxy(20 + n, 26, 14, 1);
-		n += 25;
-	}
-
-	coorxy(48, 27); cout << "UPDATE";
-	coorxy(75, 27); cout << "DELETE";
-	coorxy(101, 27); cout << "BACK";
+	buttonxy(20, 26, 14, 1);
 	coorxy(26, 27); cout << "HELP";
+
+	color(8);
+	buttonxy(45, 26, 14, 1);
+	coorxy(48, 27); cout << "ADD/UPDATE";
+
+	buttonxy(70, 26, 14, 1);
+	coorxy(75, 27); cout << "DELETE";
+	color(7);
+	
+	buttonxy(95, 26, 14, 1);
+	coorxy(101, 27); cout << "BACK";
 
 	gotoxy(5, 2); cout << "SEARCH YEAR: " << char(179); gotoxy(45, 2); cout << char(179) << "SEARCH SEMESTER:" << char(179);
 
@@ -197,9 +207,9 @@ void tablec()//CURRICULUM TABLE
 	gotoxy(2, 5); cout << char(218); gotoxy(118, 5); cout << char(191);
 	gotoxy(2, 25); cout << char(192); gotoxy(118, 25); cout << char(217);
 
-	gotoxy(35, 4); cout << "- BSIT Student Enrollment Management System -";
+	gotoxy(35, 0); cout << "- BSIT Student Enrollment Management System -";
 
-	gotoxy(24, 29); color(3); cout << "Use UP and DOWN arrow key to navigate and Enter key to register your inputs"; color(7);
+	gotoxy(24, 4); color(8); cout << "Use Arrow keys to navigate and Enter key to choose and register your inputs"; color(7);
 
 
 
@@ -214,8 +224,9 @@ void page1()//ENROLLMENT PAGE 1
 	vl(52, 4, 1, 179);
 	hl(12, 5, 41, 196);// Search bar
 
+
 	coorxy(13, 4); cout << "SEARCH POOLING NUMBER" << char(179) << ":";
-	coorxy(38, 22); cout << "- BSIT Student Enrollment Management System -";
+	coorxy(38, 2); cout << "- BSIT Student Enrollment Management System -";
 	//page 1
 	hl(6, 9, 107, 196);
 	hl(6, 11, 107, 196);
@@ -242,7 +253,7 @@ void page1()//ENROLLMENT PAGE 1
 	gotoxy(6, 7); cout << char(218); gotoxy(112, 7); cout << char(191);
 	gotoxy(6, 15); cout << char(192); gotoxy(112, 15); cout << char(217);
 
-	gotoxy(24, 26); color(3); cout << "Use UP and DOWN arrow key to navigate and Enter key to register your inputs"; color(7);
+	gotoxy(24, 6); color(8); cout << "Use Arrow keys to navigate and Enter key to register your inputs"; color(7);
 
 }
 
@@ -315,22 +326,31 @@ void page3()//ENROLLMENT PAGE 3
 	hl(3, 25, 115, 196);
 	//buttons
 
+	gotoxy(3, 26); cout << string(46, char(196));	gotoxy(3, 28); cout << string(46, char(196)); gotoxy(3, 27); cout << char(179); gotoxy(48, 27); cout << char(179);// button layout
+	gotoxy(3, 26); cout << char(218); gotoxy(3, 28); cout << char(192);	gotoxy(48, 26); cout << char(191);/*lu*/ gotoxy(48, 28); cout << char(217);//ld// corners
+	coorxy(4, 27); cout << " TOTAL BILL: " << char(158); gotoxy(25, 27); cout << char(179) << "PAYMENT: " << char(158);
 
-	gotoxy(3, 26); cout << string(46, char(205));	gotoxy(3, 28); cout << string(46, char(205)); gotoxy(3, 27); cout << char(186); gotoxy(48, 27); cout << char(186);
-	gotoxy(3, 26); cout << char(201);	gotoxy(3, 28); cout << char(200);	gotoxy(48, 26); cout << char(187);	gotoxy(48, 28); cout << char(188);
-	coorxy(4, 27); cout << " TOTAL BILL :";
+	color(8);
 	gotoxy(80, 26); cout << string(15, char(205));	gotoxy(80, 28); cout << string(15, char(205)); gotoxy(80, 27); cout << char(186); gotoxy(95, 27); cout << char(186);
 	gotoxy(80, 26); cout << char(201);	gotoxy(80, 28); cout << char(200);	gotoxy(95, 26); cout << char(187);	gotoxy(95, 28); cout << char(188);
+	gotoxy(84, 27); cout << "CONFIRM";
+	color(7);
+
 	gotoxy(100, 26); cout << string(15, char(205));	gotoxy(100, 28); cout << string(15, char(205)); gotoxy(100, 27); cout << char(186); gotoxy(115, 27); cout << char(186);
 	gotoxy(100, 26); cout << char(201);	gotoxy(100, 28); cout << char(200);	gotoxy(115, 26); cout << char(187);	gotoxy(115, 28); cout << char(188);
-	gotoxy(84, 27); cout << "CONFIRM"; gotoxy(106, 27); cout << "BACK";
+	gotoxy(103, 27); cout << "MAIN MENU";
+
+	gotoxy(29, 0); color(8); cout << "Use Arrow keys to navigate and Enter key to register your inputs"; color(7);
+
+
 	coorxy(5, 4); cout << "NO"; coorxy(15, 4); cout << "YEAR LEVEL"; coorxy(36, 4); cout << " SUBJECT CODE";
 	coorxy(65, 4); cout << " SUBJECT DESCRIPTION"; coorxy(103, 4); cout << "SUBJECT UNIT"; coorxy(85, 24); cout << "TOTAL UNITS";
 	coorxy(35, 2); cout << "- BSIT Student Enrollment Management System -";
 
+	coorxy(40, 29); color(8); cout << "Please enter the payment first before confirming"; color(7);
+
 	gotoxy(3, 1); cout << char(218); gotoxy(117, 1); cout << char(191);
 	gotoxy(3, 25); cout << char(192); gotoxy(117, 25); cout << char(217);
-
 }
 
 void openscen() { //OPENING SCENE
@@ -421,7 +441,7 @@ void openscen() { //OPENING SCENE
 	ld = 0;
 	for (int i = 0; i < 2; i++) {
 		Sleep(80);
-		color(1);
+		color(3);//color
 		coorxy(44 + ld, 12); cout << string(8, char(177));
 		coorxy(44 + ld, 13); cout << string(8, char(177));
 		coorxy(44 + ld, 15); cout << string(8, char(177));
@@ -468,7 +488,7 @@ void openscen() { //OPENING SCENE
 	}
 	for (int i = 0; i < 9; i++) {
 		Sleep(80);
-		color(1);
+		color(3);// color 
 		coorxy(30 + i, 14); cout << char(177);
 		coorxy(30 + i, 15); cout << char(177);
 		coorxy(86 - i, 14); cout << char(177);
